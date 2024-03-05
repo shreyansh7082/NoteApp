@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
-
+const dotenv = require('dotenv')
+dotenv.config()
+const PORT = process.env.PORT || 3001;
 async function connectToMongo() {
   try {
-    await mongoose.connect('mongodb://0.0.0.0:27017/notenova', {
+    await mongoose.connect(PORT, {
       useNewUrlParser: true,
       useUnifiedTopology: true
     });
