@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv')
 dotenv.config()
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 async function connectToMongo() {
   try {
     await mongoose.connect(PORT, {
